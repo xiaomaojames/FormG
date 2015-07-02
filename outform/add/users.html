@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>users</title>
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<body>
+<br/>
+<br/>
+<div class="container">
+
+    <form class="form-horizontal" name="usersform" novalidate
+          ng-submite="add_usersform_submit()">
+        
+        <div class="form-group">
+            <label  class="col-sm-2 control-label"></label>
+            <div class="col-sm-10">
+                <input type="text" name="real_name" ng-model="users.real_name"
+                       class="form-control"  placeholder="" >
+            </div>
+        </div>
+       
+        <div class="form-group">
+            <label  class="col-sm-2 control-label"></label>
+            <div class="col-sm-10">
+                <input type="text" name="phone_number" ng-model="users.phone_number"
+                       class="form-control"  placeholder="" >
+            </div>
+        </div>
+       
+        <div class="form-group">
+            <label  class="col-sm-2 control-label"></label>
+            <div class="col-sm-10">
+                <input type="text" name="email" ng-model="users.email"
+                       class="form-control"  placeholder="" >
+            </div>
+        </div>
+       
+        <div class="form-group">
+            <label  class="col-sm-2 control-label"></label>
+            <div class="col-sm-10">
+                <input type="text" name="pwd" ng-model="users.pwd"
+                       class="form-control"  placeholder="" >
+            </div>
+        </div>
+       
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Remember me
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default"
+                        ng-disabled="usersform.$invalid"
+                        >Sign in</button>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

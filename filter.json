@@ -1,0 +1,9 @@
+{
+  "common": [
+    "created_at",
+    "updated_at",
+    "id"
+  ],
+  "reg":["_id$"],
+  "a": []
+}
