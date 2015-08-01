@@ -2,10 +2,11 @@
 <form class="form-inline" name="{{name}}form" novalidate ng-submit="add_{{name}}_submit()">
     {{each colums as value key}}
     <div class="form-group">
-        <label >{{value.remark}}</label>
+        <label >{{value.remark}}:</label>
         <input type="text" class="form-control"  name="{{value.cname}}" ng-model="{{name}}.{{value.cname}}"
                placeholder="" {{value.isnull}}>
     </div>
     {{/each}}
-    <button type="submit" class="btn btn-default">Send invitation</button>
+    <button type="submit" ng-disabled="{{name}}form.$invalid" class="btn btn-success">确定</button>
+     <button ng-click="cancleEdit()" type="button" class="btn btn-danger">取消</button>
 </form>
